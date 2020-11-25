@@ -1,4 +1,4 @@
-$(function() {
+(function() {
 
   var $aud = $("#audio"),
       $aud1 = $("#audio1"),
