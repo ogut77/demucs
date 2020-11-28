@@ -46,7 +46,7 @@ $(function() {
   $vol.slider( {
     value : AUDIO.volume*100,
     slide : function(ev, ui) {
-      $vol.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+      $vol.css({background:"hsla(100,"+ui.value+"%,50%,1)"});
       AUDIO.volume = ui.value/100; 
     } 
   });
@@ -55,7 +55,7 @@ $(function() {
   $vol1.slider( {
     value : AUDIO1.volume*100,
     slide : function(ev, ui) {
-      $vol1.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+      $vol1.css({background:"hsla(100,"+ui.value+"%,50%,1)"});
       AUDIO1.volume = ui.value/100; 
     } 
   });
@@ -63,7 +63,7 @@ $(function() {
   $vol2.slider( {
     value : AUDIO2.volume*100,
     slide : function(ev, ui) {
-      $vol2.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+      $vol2.css({background:"hsla(100,"+ui.value+"%,50%,1)"});
       AUDIO2.volume = ui.value/100; 
     } 
   });
@@ -71,7 +71,7 @@ $(function() {
   $vol3.slider( {
     value : AUDIO3.volume*100,
     slide : function(ev, ui) {
-      $vol3.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+      $vol3.css({background:"hsla(100,"+ui.value+"%,50%,1)"});
       AUDIO3.volume = ui.value/100; 
     } 
   });
@@ -79,7 +79,7 @@ $(function() {
     $vol4.slider( {
     value : AUDIO4.volume*100,
     slide : function(ev, ui) {
-      $vol4.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+      $vol4.css({background:"hsla(080,"+ui.value+"%,50%,1)"});
       AUDIO4.volume = ui.value/100; 
     } 
   });
