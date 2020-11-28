@@ -1,4 +1,4 @@
-(function($) {
+$(function() {
 
   var $aud = $("#audio"),
       $aud1 = $("#audio1"),
@@ -6,11 +6,17 @@
       $aud3 = $("#audio3"),
       $aud4 = $("#audio4"),
       $pp  = $('#playpause'),
+      $mu  = $('#mu'),
+      $mu1 = $('#mu1'),
+      $mu2 = $('#mu2'),
+      $mu3 = $('#mu3'),
+      $mu4 = $('#mu4'),
       $vol = $('#volume'),
       $vol1 = $('#volume1'),
       $vol2 = $('#volume2'),
       $vol3 = $('#volume3'),
       $vol4 =$('#volume4'),
+      $vol5 =$('#volume5'),
       $bar = $("#progressbar"),
       AUDIO= $aud[0],
       AUDIO1= $aud1[0],
@@ -97,4 +103,64 @@
   
   });
   
+  $mu1.click(function() {
+		if (AUDIO1.muted == false){ 
+			AUDIO1.muted = true;
+			$('button#mu1').addClass('muted');
+		}
+		else{ 
+			AUDIO1.muted = false;
+			$('button#mu1').removeClass('muted');
+		}
+	});
+    
+  $mu2.click(function() {
+		if (AUDIO2.muted == false){ 
+			AUDIO2.muted = true;
+			$('button#mu2').addClass('muted');
+		}
+		else{ 
+			AUDIO2.muted = false;
+			$('button#mu2').removeClass('muted');
+		}
+	});
+ 
+   $mu3.click(function() {
+		if (AUDIO3.muted == false){ 
+			AUDIO3.muted = true;
+			$('button#mu3').addClass('muted');
+		}
+		else{ 
+			AUDIO3.muted = false;
+			$('button#mu3').removeClass('muted');
+		}
+	});
+    
+     $mu4.click(function() {
+		if (AUDIO4.muted == false){ 
+			AUDIO4.muted = true;
+			$('button#mu4').addClass('muted');
+		}
+		else{ 
+			AUDIO4.muted = false;
+			$('button#mu4').removeClass('muted');
+		}
+	});
+   $mu.click(function() {
+		if (AUDIO.muted == false){ 
+			AUDIO.muted = true;
+			$('button#mu').addClass('muted');
+		}
+		else{ 
+			AUDIO.muted = false;
+			$('button#mu').removeClass('muted');
+		}
+	});
+    
+	
+
+  
 });
+
+
+
