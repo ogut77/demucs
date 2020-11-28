@@ -79,7 +79,7 @@ $(function() {
     $vol4.slider( {
     value : AUDIO4.volume*100,
     slide : function(ev, ui) {
-      $vol4.css({background:"hsla(080,"+ui.value+"%,50%,1)"});
+      $vol4.css({background:"hsla(100,"+ui.value+"%,50%,1)"});
       AUDIO4.volume = ui.value/100; 
     } 
   });
