@@ -18,7 +18,6 @@ $(function() {
       $vol4 =$('#volume4'),
       $vol5 =$('#volume5'),
       $bar = $("#progressbar"),
-  
       AUDIO= $aud[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
@@ -101,6 +100,7 @@ $(function() {
          AUDIO2[AUDIO2.paused?'play':'pause'](),
          AUDIO3[AUDIO3.paused?'play':'pause'](),
          AUDIO4[AUDIO4.paused?'play':'pause']();
+  
   });
   
   $mu1.click(function() {
@@ -161,4 +161,3 @@ $(function() {
 
   
 });
-
