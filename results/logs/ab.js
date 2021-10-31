@@ -19,14 +19,14 @@ $(function() {
       $vol4 =$('#volume4'),
       $vol5 =$('#volume5'),
       $bar = $("#progressbar"),
-      VIDEO1= $vid1[0],
+      VID1= $vid1[0],
       AUDIO= $aud[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
       AUDIO3= $aud3[0],
       AUDIO4= $aud4[0];
-  VIDEO1.volume = 0.75;
-  VIDEO1.addEventListener("timeupdate", progress, false);
+  VID1.volume = 0.75;
+  VID1.addEventListener("timeupdate", progress, false);
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
   AUDIO1.volume = 0.75;
@@ -95,13 +95,13 @@ $(function() {
        AUDIO2.currentTime = AUDIO2.duration/100*ui.value;
        AUDIO3.currentTime = AUDIO3.duration/100*ui.value;
        AUDIO4.currentTime = AUDIO4.duration/100*ui.value;
-       VIDEO1.currentTime = VIDEO1.duration/100*ui.value;
+       VID1.currentTime = VID1.duration/100*ui.value;
     }
   });
   
   $pp.click(function() {
 	  
-    return VIDEO1[VIDEO1.paused?'play':'pause'](),
+    return VID1[VID1.paused?'play':'pause'](),
 	  AUDIO[AUDIO.paused?'play':'pause'](),
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
