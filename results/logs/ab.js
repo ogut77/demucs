@@ -1,6 +1,7 @@
 $(function() {
 
-  var $aud = $("#audio"),
+  var $vid1 = $("#video1"),
+  $aud = $("#audio"),
       $aud1 = $("#audio1"),
       $aud2 = $("#audio2"),
       $aud3 = $("#audio3"),
@@ -18,11 +19,13 @@ $(function() {
       $vol4 =$('#volume4'),
       $vol5 =$('#volume5'),
       $bar = $("#progressbar"),
+      VIDEO1= $vid1[0],
       AUDIO= $aud[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
       AUDIO3= $aud3[0];
        AUDIO4= $aud4[0];
+	VIDEO1.volume = 0;
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
   AUDIO1.volume = 0.75;
