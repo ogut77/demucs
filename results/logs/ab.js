@@ -99,7 +99,8 @@ $(function() {
   });
   
   $pp.click(function() {
-    return VIDEO1[VIDEO1.paused?'play':'pause'](),
+	  VIDEO1.play();
+    return 
 	  AUDIO[AUDIO.paused?'play':'pause'](),
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
