@@ -23,7 +23,7 @@ $(function() {
       AUDIO= $aud[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
-      AUDIO3= $aud3[0];
+      AUDIO3= $aud3[0],
        AUDIO4= $aud4[0];
 	VIDEO1.volume = 0.75;
   AUDIO.volume = 0.75;
