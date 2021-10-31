@@ -88,13 +88,13 @@ $(function() {
   });
     $bar.slider( {
     value : AUDIO.currentTime,
-    slide : function(ev, ui) {
-	 VIDEO1.currentTime = VIDEO1.duration/100*ui.value;   
+    slide : function(ev, ui) {  
         AUDIO.currentTime = AUDIO.duration/100*ui.value;
        AUDIO1.currentTime = AUDIO1.duration/100*ui.value;
        AUDIO2.currentTime = AUDIO2.duration/100*ui.value;
        AUDIO3.currentTime = AUDIO3.duration/100*ui.value;
        AUDIO4.currentTime = AUDIO4.duration/100*ui.value;
+	      VIDEO1.currentTime = VIDEO1.duration/100*ui.value;
     }
   });
   
@@ -103,7 +103,7 @@ $(function() {
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
          AUDIO3[AUDIO3.paused?'play':'pause'](),
-         AUDIO4[AUDIO4.paused?'play':'pause']()
+         AUDIO4[AUDIO4.paused?'play':'pause'](),
 	  VIDEO1[VIDEO1.paused?'play':'pause']();
   
   });
