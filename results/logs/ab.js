@@ -23,9 +23,9 @@ $(function() {
       AUDIO= $aud[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
-      AUDIO3= $aud3[0];
-       AUDIO4= $aud4[0];
-	VIDEO1.volume = 0.75;
+      AUDIO3= $aud3[0],
+      AUDIO4= $aud4[0],
+  VIDEO1.volume = 0.75;
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
   AUDIO1.volume = 0.75;
@@ -94,7 +94,7 @@ $(function() {
        AUDIO2.currentTime = AUDIO2.duration/100*ui.value;
        AUDIO3.currentTime = AUDIO3.duration/100*ui.value;
        AUDIO4.currentTime = AUDIO4.duration/100*ui.value;
-	      VIDEO1.currentTime = VIDEO1.duration/100*ui.value;
+       VIDEO1.currentTime = VIDEO1.duration/100*ui.value;
     }
   });
   
