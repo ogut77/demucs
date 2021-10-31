@@ -1,7 +1,7 @@
 $(function() {
 
-  var $vid1 = $("#video1"),
-  $aud = $("#audio"),
+  var 
+  $aud = $("#audio"),$vid1 = $("#video1"),
       $aud1 = $("#audio1"),
       $aud2 = $("#audio2"),
       $aud3 = $("#audio3"),
