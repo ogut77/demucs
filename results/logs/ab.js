@@ -102,8 +102,7 @@ $(function() {
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
          AUDIO3[AUDIO3.paused?'play':'pause'](),
-         AUDIO4[AUDIO4.paused?'play':'pause'](),
-          VIDEO[VIDEO.paused?'play':'pause']();
+         AUDIO4[AUDIO4.paused?'play':'pause']();
   });
   
   $mu1.click(function() {
