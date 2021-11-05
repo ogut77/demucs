@@ -101,7 +101,7 @@ $(function() {
   
   $pp.click(function() {
 	  
-    return VID1[VID1.paused?'play':'pause'](),
+    return VID1[VID1.paused?'play':'pause'](),VID1.muted = true;
 	  AUDIO[AUDIO.paused?'play':'pause'](),
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
