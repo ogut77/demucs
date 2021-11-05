@@ -25,7 +25,7 @@ $(function() {
       AUDIO2= $aud2[0],
       AUDIO3= $aud3[0],
       AUDIO4= $aud4[0];
-  VID1.volume = 0.75;
+  VID1.volume = 0;
   VID1.addEventListener("timeupdate", progress, false);
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
