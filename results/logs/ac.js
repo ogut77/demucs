@@ -13,6 +13,7 @@ $(function() {
       $mu3 = $('#mu3'),
       $mu4 = $('#mu4'),
       $vol = $('#volume'),
+       $vol0 = $('#volume0'),
       $vol1 = $('#volume1'),
       $vol2 = $('#volume2'),
       $vol3 = $('#volume3'),
@@ -85,6 +86,14 @@ $(function() {
     slide : function(ev, ui) {
       $vol4.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
       AUDIO4.volume = ui.value/100; 
+    } 
+  });
+	
+$vol0.slider( {
+    value : AUDIO0.volume*100,
+    slide : function(ev, ui) {
+      $vol.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
+      AUDIO0.volume = ui.value/100; 
     } 
   });
     $bar.slider( {
