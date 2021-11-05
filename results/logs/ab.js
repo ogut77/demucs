@@ -101,7 +101,8 @@ $(function() {
   });
   
   $pp.click(function() {
-    return AUDIO[AUDIO.paused?'play':'pause'](),AUDIO0[AUDIO.paused?'play':'pause'](),
+    return AUDIO[AUDIO.paused?'play':'pause'](),
+	    AUDIO0[AUDIO0.paused?'play':'pause'](),
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
          AUDIO3[AUDIO3.paused?'play':'pause'](),
