@@ -1,7 +1,6 @@
 $(function() {
 
-  var 
-  $aud = $("#audio"),$vid1 = $("#video1"),
+  var $aud = $("#audio"),
       $aud1 = $("#audio1"),
       $aud2 = $("#audio2"),
       $aud3 = $("#audio3"),
@@ -19,14 +18,11 @@ $(function() {
       $vol4 =$('#volume4'),
       $vol5 =$('#volume5'),
       $bar = $("#progressbar"),
-      VID1= $vid1[0],
       AUDIO= $aud[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
-      AUDIO3= $aud3[0],
-      AUDIO4= $aud4[0];
-  VID1.volume = 0;
- VID1.addEventListener("timeupdate", progress, false);
+      AUDIO3= $aud3[0];
+       AUDIO4= $aud4[0];
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
   AUDIO1.volume = 0.75;
@@ -89,36 +85,30 @@ $(function() {
   });
     $bar.slider( {
     value : AUDIO.currentTime,
-    slide : function(ev, ui) {  
+    slide : function(ev, ui) {
         AUDIO.currentTime = AUDIO.duration/100*ui.value;
        AUDIO1.currentTime = AUDIO1.duration/100*ui.value;
        AUDIO2.currentTime = AUDIO2.duration/100*ui.value;
        AUDIO3.currentTime = AUDIO3.duration/100*ui.value;
        AUDIO4.currentTime = AUDIO4.duration/100*ui.value;
-       VID1.currentTime = VID1.duration/100*ui.value;
     }
   });
   
   $pp.click(function() {
-	  
-    return VID1[VID1.paused?'play':'pause'](),
-	  AUDIO[AUDIO.paused?'play':'pause'](),
+    return AUDIO[AUDIO.paused?'play':'pause'](),
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
          AUDIO3[AUDIO3.paused?'play':'pause'](),
          AUDIO4[AUDIO4.paused?'play':'pause']();
-	
   
   });
   
   $mu1.click(function() {
 		if (AUDIO1.muted == false){ 
-			VID1.muted = true;
 			AUDIO1.muted = true;
 			$('button#mu1').addClass('muted');
 		}
 		else{ 
-			VID1.muted = true;
 			AUDIO1.muted = false;
 			$('button#mu1').removeClass('muted');
 		}
@@ -126,12 +116,10 @@ $(function() {
     
   $mu2.click(function() {
 		if (AUDIO2.muted == false){ 
-			VID1.muted = true;
 			AUDIO2.muted = true;
 			$('button#mu2').addClass('muted');
 		}
 		else{ 
-			VID1.muted = true;
 			AUDIO2.muted = false;
 			$('button#mu2').removeClass('muted');
 		}
@@ -173,3 +161,4 @@ $(function() {
 
   
 });
+
