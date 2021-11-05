@@ -1,6 +1,6 @@
 $(function() {
 
-  var $aud0 = $("#audio0"),
+  var $aud1a = $("#audio1a"),
   $aud = $("#audio"),
       $aud1 = $("#audio1"),
       $aud2 = $("#audio2"),
@@ -21,14 +21,14 @@ $(function() {
       $vol5 =$('#volume5'),
       $bar = $("#progressbar"),
       AUDIO= $aud[0],
-      AUDIO0= $aud0[0],
+      AUDIO1a= $aud1a[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
       AUDIO3= $aud3[0],
        AUDIO4= $aud4[0];
 	
-	AUDIO0.volume = 0.75;
-  AUDIO0.addEventListener("timeupdate", progress, false);
+	AUDIO1a.volume = 0.75;
+  AUDIO1a.addEventListener("timeupdate", progress, false);
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
   AUDIO1.volume = 0.75;
@@ -46,7 +46,7 @@ $(function() {
   
   function progress() {
     $bar.slider('value', ~~(100/AUDIO.duration*AUDIO.currentTime));
-    $pp.text(getTime(AUDIO0.currentTime));
+    $pp.text(getTime(AUDIO.currentTime));
   }
 
   $vol.slider( {
@@ -90,17 +90,11 @@ $(function() {
     } 
   });
 	
-$vol0.slider( {
-    value : AUDIO0.volume*100,
-    slide : function(ev, ui) {
-      $vol.css({background:"hsla(180,"+ui.value+"%,50%,1)"});
-      AUDIO0.volume = ui.value/100; 
-    } 
-  });
+
     $bar.slider( {
     value : AUDIO.currentTime,
     slide : function(ev, ui) {
-      AUDIO0.currentTime = AUDIO0.duration/100*ui.value;
+      AUDIO1a.currentTime = AUDIO.duration/100*ui.value;
         AUDIO.currentTime = AUDIO.duration/100*ui.value;
        AUDIO1.currentTime = AUDIO1.duration/100*ui.value;
        AUDIO2.currentTime = AUDIO2.duration/100*ui.value;
@@ -110,7 +104,7 @@ $vol0.slider( {
   });
   
   $pp.click(function() {
-    return AUDIO0[AUDIO0.paused?'play':'pause'](),AUDIO[AUDIO.paused?'play':'pause'](),
+    return AUDIO1a[AUDIO1a.paused?'play':'pause'](),AUDIO[AUDIO.paused?'play':'pause'](),
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
          AUDIO3[AUDIO3.paused?'play':'pause'](),
