@@ -44,7 +44,7 @@ $(function() {
   
   function progress() {
     $bar.slider('value', ~~(100/AUDIO.duration*AUDIO.currentTime));
-    $pp.text(getTime(AUDIO.currentTime));
+    $pp.text(getTime(AUDIO0.currentTime));
   }
 
   $vol.slider( {
