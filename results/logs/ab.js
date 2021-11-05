@@ -16,12 +16,11 @@ $(function() {
       $vol2 = $('#volume2'),
       $vol3 = $('#volume3'),
       $vol4 =$('#volume4'),
-      $vol5 =$('#volume5'),
       $bar = $("#progressbar"),
       AUDIO= $aud[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
-      AUDIO3= $aud3[0];
+      AUDIO3= $aud3[0],
        AUDIO4= $aud4[0];
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
