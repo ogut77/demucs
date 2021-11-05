@@ -1,8 +1,6 @@
 $(function() {
 
-  var 
-  $aud0 = $("#audio0"),
-  $aud = $("#audio"),
+  var $aud = $("#audio"),
       $aud1 = $("#audio1"),
       $aud2 = $("#audio2"),
       $aud3 = $("#audio3"),
@@ -21,13 +19,10 @@ $(function() {
       $vol5 =$('#volume5'),
       $bar = $("#progressbar"),
       AUDIO= $aud[0],
-       AUDIO0= $aud0[0],
       AUDIO1= $aud1[0],
       AUDIO2= $aud2[0],
-      AUDIO3= $aud3[0],
+      AUDIO3= $aud3[0];
        AUDIO4= $aud4[0];
-  AUDIO0.volume = 0;
-  AUDIO0.addEventListener("timeupdate", progress, false);
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
   AUDIO1.volume = 0.75;
@@ -91,7 +86,6 @@ $(function() {
     $bar.slider( {
     value : AUDIO.currentTime,
     slide : function(ev, ui) {
-	 AUDIO0.currentTime = AUDIO0.duration/100*ui.value;
         AUDIO.currentTime = AUDIO.duration/100*ui.value;
        AUDIO1.currentTime = AUDIO1.duration/100*ui.value;
        AUDIO2.currentTime = AUDIO2.duration/100*ui.value;
@@ -102,7 +96,6 @@ $(function() {
   
   $pp.click(function() {
     return AUDIO[AUDIO.paused?'play':'pause'](),
-	    AUDIO0[AUDIO0.paused?'play':'pause'](),
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
          AUDIO3[AUDIO3.paused?'play':'pause'](),
