@@ -100,7 +100,7 @@ $vol0.slider( {
     $bar.slider( {
     value : AUDIO.currentTime,
     slide : function(ev, ui) {
-      AUDIO0.currentTime = AUDIO.duration/100*ui.value;
+      AUDIO0.currentTime = AUDIO0.duration/100*ui.value;
         AUDIO.currentTime = AUDIO.duration/100*ui.value;
        AUDIO1.currentTime = AUDIO1.duration/100*ui.value;
        AUDIO2.currentTime = AUDIO2.duration/100*ui.value;
