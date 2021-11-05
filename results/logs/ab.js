@@ -26,7 +26,7 @@ $(function() {
       AUDIO3= $aud3[0],
       AUDIO4= $aud4[0];
   VID1.volume = 0;
-  VID1.addEventListener("timeupdate", progress, false);
+ VID1.addEventListener("timeupdate", progress, false);
   AUDIO.volume = 0.75;
   AUDIO.addEventListener("timeupdate", progress, false);
   AUDIO1.volume = 0.75;
@@ -101,7 +101,7 @@ $(function() {
   
   $pp.click(function() {
 	  
-    return VID1[VID1.paused?'play':'pause'](),VID1.muted = true;
+    return VID1[VID1.paused?'play':'pause'](),
 	  AUDIO[AUDIO.paused?'play':'pause'](),
          AUDIO1[AUDIO1.paused?'play':'pause'](),
          AUDIO2[AUDIO2.paused?'play':'pause'](),
@@ -113,10 +113,12 @@ $(function() {
   
   $mu1.click(function() {
 		if (AUDIO1.muted == false){ 
+			VID1.muted = true;
 			AUDIO1.muted = true;
 			$('button#mu1').addClass('muted');
 		}
 		else{ 
+			VID1.muted = true;
 			AUDIO1.muted = false;
 			$('button#mu1').removeClass('muted');
 		}
@@ -124,10 +126,12 @@ $(function() {
     
   $mu2.click(function() {
 		if (AUDIO2.muted == false){ 
+			VID1.muted = true;
 			AUDIO2.muted = true;
 			$('button#mu2').addClass('muted');
 		}
 		else{ 
+			VID1.muted = true;
 			AUDIO2.muted = false;
 			$('button#mu2').removeClass('muted');
 		}
